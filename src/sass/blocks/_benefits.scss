@@ -2,14 +2,7 @@
     padding: 73px 0 65px 0;
     min-width: 473px;
     background: #F6F6F6;
-    &__logo{
-        text-align: center;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 30px;
-        color: #0D0D0D;
-    }
-    &__wrapper{
+&__wrapper{
         margin-top: 60px;
         display: flex;
         justify-content: space-between;

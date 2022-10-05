@@ -1,0 +1,125 @@
+@media (max-width: 1200px ){
+    .container{
+        max-width: 800px;
+    }
+}
+@media (max-width: 991px ){
+    .container{
+        max-width: 730px;
+    }
+    .header{
+        &__logo {
+            width: 200px;
+        }
+        &__official{
+            font-size: 11px;
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+    .promo{    
+        min-height: 625px;
+        &__header{
+            font-size: 40px;
+        }
+        &__subheader{
+            font-size: 22px;
+        }
+        &__icons{
+            margin-top: 50px;
+            width: 390px;
+        }
+    }
+    .button_main{
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 767px ){
+    .container{
+        max-width: 530px;
+    }
+    .header{
+        &__logo {
+            width: 150px;
+        }
+        &__official{
+            font-size: 10px;
+            span{
+                font-size: 14px;
+            }
+        }
+        &__phone{
+            font-size: 15px;
+        }
+    }
+    .button{
+        width: 140px;
+    }
+    .promo{    
+        min-height: 600px;
+        padding: 21px 0 75px 0;
+        &__header{
+            font-size: 30px;
+        }
+        &__subheader{
+            font-size: 16px;
+        }
+        &__icons{
+            margin-top: 50px;
+            width: 320px;
+        }
+        &__icon{
+            font-size: 12px;
+        }
+    }
+    .button_main{
+        width: 250px;
+        margin-top: 45px;
+        font-size: 14px;
+    }
+    .benefits{
+        &__header{
+            font-size: 16px;
+        }
+        &__wrapper{
+            flex-wrap: wrap
+        }
+        &__advantage{
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 575px ){
+    .container{
+        max-width: 430px;
+    }
+    .header{
+        &__logo {
+            width: 130px;
+        }
+        &__official{
+            font-size: 9px;
+            span{
+                font-size: 12px;
+            }
+        }
+        &__phone{
+            font-size: 13px;
+        }
+    }
+    .button{
+        width: 115px;
+        font-size: 11px;
+    }
+    .button_main{
+        width: 250px;
+        margin-top: 45px;
+        font-size: 14px;
+    }
+    .benefits__wrapper{
+        justify-content: center;
+    }
+}
