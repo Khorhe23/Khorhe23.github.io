@@ -3,10 +3,12 @@
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 
+@import 'blocks/container';
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/benefits';
 @import 'blocks/title';
-@import 'blocks/container';
+@import 'blocks/consultation';
+@import 'blocks/forms';
 @import 'base/media';

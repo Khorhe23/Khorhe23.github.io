@@ -56,6 +56,14 @@
     }
     .button{
         width: 140px;
+        &_main{
+            width: 250px;
+            margin-top: 45px;
+            font-size: 14px;
+        }
+        &_submit {
+            width: 250px;
+        }
     }
     .promo{    
         min-height: 600px;
@@ -73,11 +81,6 @@
         &__icon{
             font-size: 12px;
         }
-    }
-    .button_main{
-        width: 250px;
-        margin-top: 45px;
-        font-size: 14px;
     }
     .benefits{
         &__header{
@@ -113,13 +116,27 @@
     .button{
         width: 115px;
         font-size: 11px;
-    }
-    .button_main{
-        width: 250px;
-        margin-top: 45px;
-        font-size: 14px;
+        &_main{
+            width: 250px;
+            margin-top: 45px;
+            font-size: 14px;
+        }
+        &_submit {
+            width: 200px;
+        }
     }
     .benefits__wrapper{
         justify-content: center;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .consultation {
+        min-height: 350px;
+        &__descr {
+            font-size: 17px;
+        }
     }
 }
