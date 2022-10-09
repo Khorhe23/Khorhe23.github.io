@@ -34,6 +34,16 @@
     .button_main{
         margin-top: 45px;
     }
+    .carousel {
+        &__inner {
+            div {
+                img{
+                    width: 80%;
+
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 767px ){
