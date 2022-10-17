@@ -32,4 +32,88 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
-},);
+
+    // Modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow')
+    });
+
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+    // Validation
+
+    function valideForms(form){
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Please specify HoneyMoon",
+                phone:"Please enter Fucking phone",
+                email: {
+                    required: "Please, enter your email",
+                    email: "It isn't an a email"
+                }
+            }
+        });
+    };
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+
+    //Mask on enter
+
+    $('input[name=phone]').mask("+38 (099) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        }else { 
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href=#up]").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offSet().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
+});
